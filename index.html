@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hamza El Khoukhi - Profil</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="header-container">
-      <img src="profile.jpg" alt="Photo de Hamza El Khoukhi" class="profile-photo">
-      <h1>Hamza El Khoukhi</h1>
-      <p>PhD – Intelligence Artificielle | ATER à l’Université Toulouse 2</p>
+      <img src="profile.jpg" alt="Photo de Hamza" class="profile-photo" />
+      <div class="header-text">
+        <h1>Hamza El Khoukhi</h1>
+        <p>PhD – Intelligence Artificielle | ATER à l’Université Toulouse 2</p>
+      </div>
     </div>
-    <div class="header-container">
     <nav>
-      <a href="#about">À propos</a>
-      <a href="#projects">Projets</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
+      <a href="#" onclick="showSection('about.html')">À propos</a>
+      <a href="#" onclick="showSection('projects.html')">Projets</a>
+      <a href="#" onclick="showSection('publications.html')">Publications</a>
+      <a href="#" onclick="showSection('talks.html')">Talks</a>
+      <a href="#" onclick="showSection('cv.html')">CV</a>
+      <a href="#" onclick="showSection('teaching.html')">Enseignement</a>
+      <a href="#" onclick="showSection('contact.html')">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="about">
-      <h2>À propos</h2>
-      <p>Je suis docteur en intelligence artificielle, passionné par le streaming data, l’IoT, et les systèmes distribués intelligents. Actuellement ATER à Toulouse 2.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projets</h2>
-      <ul>
-        <li><strong>HOLSYS</strong> – Système de gestion des bâtiments intelligents</li>
-        <li><strong>MIGRID</strong> – Micro-réseaux hybrides intelligents (USAID)</li>
-        <li><strong>SELFSERV</strong> – Téléassistance pour diabétiques (VLIR-UOS)</li>
-      </ul>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
-      <p>Voir mon <a href="https://scholar.google.com/" target="_blank">profil Google Scholar</a></p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>📧 hamza[at]example.com</p>
-      <p>🐙 <a href="https://github.com/hamzaelkh" target="_blank">GitHub</a></p>
-    </section>
+<!--  all sections are in there own html files -->
   </main>
 
-  <footer>
-    <p>&copy; 2025 Hamza El Khoukhi</p>
-  </footer>
+  <script>
+
+        function loadPage(page) {
+      fetch(page)
+        .then(res => {
+          if (!res.ok) throw new Error("Page not found");
+          return res.text();
+        })
+        .then(data => {
+          document.getElementById("main-content").innerHTML = data;
+        })
+        .catch(err => {
+          document.getElementById("main-content").innerHTML = "<p>Erreur de chargement de la page.</p>";
+          console.error(err);
+        });
+    }
+
+    // Load default page
+    window.onload = () => {
+      loadPage('about.html');
+    };
+  </script>
 </body>
 </html>

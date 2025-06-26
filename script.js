@@ -1,19 +1,12 @@
-    function loadPage(page) {
-      fetch(page)
-        .then(res => {
-          if (!res.ok) throw new Error("Page not found");
-          return res.text();
-        })
-        .then(data => {
-          document.getElementById("main-content").innerHTML = data;
-        })
-        .catch(err => {
-          document.getElementById("main-content").innerHTML = "<p>Erreur de chargement de la page.</p>";
-          console.error(err);
-        });
-    }
+function showSection(id) {
+  const sections = document.querySelectorAll('.content-section');
+  sections.forEach(section => section.classList.add('hidden'));
 
-    // Load default page
-    window.onload = () => {
-      loadPage('about.html');
-    };
+  const active = document.getElementById(id);
+  if (active) {
+    active.classList.remove('hidden');
+  }
+}
+
+// Affiche "À propos" par défaut au chargement
+window.onload = () => showSection('about');

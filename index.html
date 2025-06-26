@@ -16,41 +16,87 @@
       </div>
     </div>
     <nav>
-      <a href="#" onclick="showSection('about.html')">À propos</a>
-      <a href="#" onclick="showSection('projects.html')">Projets</a>
-      <a href="#" onclick="showSection('publications.html')">Publications</a>
-      <a href="#" onclick="showSection('talks.html')">Talks</a>
-      <a href="#" onclick="showSection('cv.html')">CV</a>
-      <a href="#" onclick="showSection('teaching.html')">Enseignement</a>
-      <a href="#" onclick="showSection('contact.html')">Contact</a>
+      <a href="#" onclick="showSection('about')">Biographie</a>
+      <a href="#" onclick="showSection('projects')">Projets de recherche</a>
+      <a href="#" onclick="showSection('publications')">Publications</a>
+      <a href="#" onclick="showSection('talks')">Talks</a>
+      <a href="#" onclick="showSection('cv')">CV</a>
+      <a href="#" onclick="showSection('teaching')">Enseignement</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
     </nav>
   </header>
 
   <main>
-<!--  all sections are in there own html files -->
+      
+    <section id="about" class="content-section">
+      <h2>Biographie</h2>
+      <p>Actuellement, ATER à l’université Toulouse 2 Jean Jaurès. Il était chercheur postdoctorat en IA et
+        robotique à l'Institut Pascal et à l'INP, Clermont Ferrand, France. Il a travaillé en tant que doctorant
+        en collaboration entre l'Université Moulay Ismail de Meknès et l'Université Internationale de Rabat au
+        Maroc sur différents projets de recherche, à savoir SELFSERV financé par VLIRUOS, MIGRID financé
+        par USAID et HOLSYS financé par IRESEN. Ses principaux intérêts comprennent le domaine de
+        l'intelligence artificielle et ses applications ainsi que les approches d'apprentissage automatique en
+        temps réel et les techniques de traitement de données en flux.</p>
+      <img src="parcours.gif" alt="Résumé architecture" class="resume-photo" />
+    </section>
+
+    
+    <section id="projects" class="content-section hidden">
+      <h2>Projets</h2>
+      <ul>
+        <li><strong>2019- 2022 : HOLSYS Projet, </strong> IRESEN/GEP/UIR, Maroc 
+        <p>L’objectif de projet est de développer une plateforme holistique pour la gestion du système actif et passif des bâtiments intelligents.</p>
+        </li>
+        <li><strong>MIGRID</strong> – Micro-réseaux hybrides intelligents (USAID)</li>
+        <li><strong>SELFSERV</strong> – Téléassistance pour diabétiques (VLIR-UOS)</li>
+      </ul>
+    </section>
+
+    <section id="publications" class="content-section hidden">
+      <h2>Publications</h2>
+      <ul>
+        <li>El Khoukhi H. et al., « Occupancy Detection in Smart Buildings using Vertical Hoeffding Tree », 2020.</li>
+        <li>Voir aussi sur <a href="#">Google Scholar</a>.</li>
+      </ul>
+    </section>
+
+
+    <section id="talks" class="content-section hidden">
+      <h2>Talks</h2>
+      <ul>
+        <li>Federated Learning on Edge – UIR, 2023</li>
+        <li>IoT & Energy Efficiency – ENSA Marrakech, 2019</li>
+        <li>UNESCO Hackathon – Inde, 2022</li>
+      </ul>
+    </section>
+
+
+    <section id="cv" class="content-section hidden">
+      <h2>CV</h2>
+      <p>Téléchargez mon <a href="Hamza_ElKhoukhi_CV.pdf" target="_blank">CV en PDF</a>.</p>
+    </section>
+
+
+    <section id="teaching" class="content-section hidden">
+      <h2>Enseignement & Encadrement</h2>
+      <ul>
+        <li>ATER à Toulouse 2</li>
+        <li>Cours : IoT, Cloud Computing, IA</li>
+        <li>Encadrement de projets de licence et master</li>
+      </ul>
+    </section>
+
+    
+    <section id="contact" class="content-section hidden">
+      <h2>Contact</h2>
+      <p>Email : <a href="mailto:hamza.el_khoukhi@univ-tlse2.fr">hamza.el_khoukhi@univ-tlse2.fr</a></p>
+      <p>LinkedIn : <a href="https://linkedin.com/in/hamzaelkhoukhi" target="_blank">hamzaelkhoukhi</a></p>
+    </section>
+
+
+
   </main>
 
-  <script>
-
-        function loadPage(page) {
-      fetch(page)
-        .then(res => {
-          if (!res.ok) throw new Error("Page not found");
-          return res.text();
-        })
-        .then(data => {
-          document.getElementById("main-content").innerHTML = data;
-        })
-        .catch(err => {
-          document.getElementById("main-content").innerHTML = "<p>Erreur de chargement de la page.</p>";
-          console.error(err);
-        });
-    }
-
-    // Load default page
-    window.onload = () => {
-      loadPage('about.html');
-    };
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -19,8 +19,8 @@ header {
 }
 
 .profile-photo {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-right: 20px;
   object-fit: cover;
@@ -57,6 +57,14 @@ main {
 
 .content-section {
   display: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
 }
 
 .content-section:not(.hidden) {
@@ -65,7 +73,7 @@ main {
 
 .resume-photo {
   width: 100%;
-  max-width: 600px;
+  max-width: 900px;
   margin-top: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);

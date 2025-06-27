@@ -82,3 +82,18 @@ main {
 .hidden {
   display: none;
 }
+
+.bracketed {
+  list-style-type: none;
+  counter-reset: ref;
+  padding-left: 0;
+}
+.bracketed li {
+  counter-increment: ref;
+  margin-bottom: 5px;
+}
+
+.bracketed li::before {
+  content: "[" counter(ref) "] ";
+  font-weight: bold;
+}

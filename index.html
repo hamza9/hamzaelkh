@@ -12,7 +12,7 @@
       <img src="profile.jpg" alt="Photo de Hamza" class="profile-photo" />
       <div class="header-text">
         <h1>Hamza El Khoukhi</h1>
-        <p>PhD – Intelligence Artificielle | ATER à l’Université Toulouse 2</p>
+        <p>PhD – Intelligence Artificielle | ATER - IRIT / Université Toulouse 2</p>
       </div>
     </div>
     <nav>
@@ -40,7 +40,7 @@
       <img src="parcours.gif" alt="Résumé architecture" class="resume-photo" />
     </section>
 
-    
+    <!--
     <section id="projects" class="content-section hidden">
       <h2>Projets de recherche</h2>
       <ul>
@@ -52,24 +52,131 @@
         <li><strong>2017 :	SELFSERV </strong> VLIR-UOS, Anvers, Belgique</li>
         <p>L'objectif principal est de développer une plateforme logicielle pour l’amélioration de services de téléassistance au diabète</p>
       </ul>
+    </section>-->
+
+    <section class="content-section" id="projects">
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px;">
+        Projets de recherche
+      </h2>
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-header" onclick="toggleProject('holsys')">
+          <h3>2019 - 2022 : HOLSYS Projet</h3>
+          <span class="toggle-icon" id="icon-holsys">+</span>
+        </div>
+        <p><strong>Partenaires :</strong> IRESEN / GEP / UIR, Maroc</p>
+        <p>
+          L’objectif principal de ce projet était de développer un système intelligent de gestion énergétique des bâtiments basé sur l’IoT et le Big Data. La plateforme visait à collecter et traiter en temps réel les flux de données à l’aide d’algorithmes d’apprentissage automatique. Elle permettait d’optimiser la consommation énergétique en fonction de la production et de la demande prévues.
+        </p>
+        <div class="project-image hidden" id="holsys">
+          <img src="images/HOLSYSArchtecture.png" alt="Architecture du projet HOLSYS" />
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-header" onclick="toggleProject('migrid')">
+          <h3>2018 - 2019 : MIGRID Projet</h3>
+          <span class="toggle-icon" id="icon-migrid">+</span>
+        </div>
+        <p><strong>Partenaires :</strong> USAID-PEER Project, UIR, Maroc</p>
+        <p>
+          L’objectif principal de ce projet était de développer une plateforme holistique intégrant les microréseaux intelligents et la production/stockage d’énergie renouvelable pour des bâtiments à haute efficacité énergétique.
+          Trois axes de recherche ont été abordés : l’intégration des énergies renouvelables et la gestion de la demande, la contextualisation et le traitement des données, ainsi que les TIC pour l’interconnexion des composants.
+        </p>
+        <div class="project-image hidden" id="migrid">
+          <img src="images/MIGRID.png" alt="Architecture du projet MIGRID" />
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-header" onclick="toggleProject('selfserv')">
+          <h3>2017 : SELFSERV Projet</h3>
+          <span class="toggle-icon" id="icon-selfserv">+</span>
+        </div>
+        <p><strong>Partenaires :</strong> VLIR-UOS, Anvers, Belgique</p>
+        <p>
+          L’objectif principal du projet SELFSERV était de développer une plateforme logicielle innovante pour la téléassistance des patients diabétiques.
+          Elle combine le modèle de « self-service » des communautés orientées services avec des mécanismes de contrôle adaptatif basés sur le traitement d’événements complexes.
+          La plateforme a été testée à petite échelle afin d’évaluer son efficacité et sa rentabilité.
+        </p>
+        <div class="project-image hidden" id="selfserv">
+          <img src="images/selfserv_architecture.png" alt="Architecture du projet SELFSERV" />
+        </div>
+      </div>
     </section>
 
-    <section id="publications" class="content-section hidden">
-      <h2>Publications</h2>
-      <ol class = "bracketed">
-        <li>Elkhoukhi, Hamza, et al. "Towards a real-time occupancy detection approach for smart buildings." Procedia computer science 134 (2018): 114-120.</li>
-        <li>Elkhoukhi, Hamza, et al. "Using stream data processing for real-time occupancy detection in smart buildings." Sensors 22.6 (2022): 2371.</li>
-        <li>Elkhoukhi, Hamza, et al. "A platform architecture for occupancy detection using stream processing and machine learning approaches." Concurrency and Computation: Practice and Experience 32.17 (2020): e5651.</li>
-        <li>Elkhoukhi, Hamza, et al. "On the use of deep learning approaches for occupancy prediction in energy efficient buildings." 2019 7th International Renewable and Sustainable Energy Conference (IRSEC). IEEE, 2019.</li>
-        <li>Elkhoukhi, H., et al. "A review of occupancy sensing technologies and approaches in smart buildings." International Journal of RF Technologies 15.1 (2025): 19-48.</li>
-        <li>Elkhoukhi, Hamza, et al. "Overview of Sensing and Data Processing Technologies for Smart Building Services and Applications." Sustainability 17.9 (2025): 4029.</li>
-        <li>Kabir, Raaid, et al. "Photovoltaic power forecasting using neural networks for short and medium-term dependencies." 2024 IEEE Texas Power and Energy Conference (TPEC). IEEE, 2024.</li>
-        <li>Malek, Y. Nait, et al. "On the use of IoT and big data technologies for real-time monitoring and data processing." Procedia computer science 113 (2017): 429-434.</li>
-        <li>Kharbouch, Abdelhak, et al. "Internet-of-things based hardware-in-the-loop framework for model-predictive-control of smart building ventilation." Sensors 22.20 (2022): 7978.</li>
-        <li>Kharbouch, Abdelhak, et al. "IoT and big data technologies for monitoring and processing real-time healthcare data." International Journal of Distributed Systems and Technologies (IJDST) 10.4 (2019): 17-30.</li>
-        <li>Kharbouch, Abdelhak, et al. "Towards an IoT and big data analytics platform for the definition of diabetes telecare services." Smart application and data analysis for smart cities (SADASC'18) (2018).</li>
-      </ol>
+
+
+    <section id="publications" class="content-section">
+      <h2>📚 Publications</h2>
+
+      <!-- Journaux -->
+      <h3>1. Journaux</h3>
+      <ul class="bracketed">
+        <li>ELKHOUKHI, H., NAITMALEK, Y., BAKHOUYA, M., BEROUINE, A., KHARBOUCH, A., LACHHAB, F., ... & ESSAAIDI, M. (2020). 
+          <em>A platform architecture for occupancy detection using stream processing and machine learning approaches.</em> 
+          <strong>Concurrency and Computation: Practice and Experience</strong>, 32(17), e5651.
+        </li>
+        <li>ELKHOUKHI, H., BAKHOUYA, M., EL OUADGHIRI, D., & HANIFI, M. (2022). 
+          <em>Using stream data processing for real-time occupancy detection in smart buildings.</em> 
+          <strong>Sensors</strong>, 22(6), 2371.
+        </li>
+        <li>KHARBOUCH, A., NAITMALEK, Y., ELKHOUKHI, H., BAKHOUYA, M., DE FLORIO, V., EL OUADGHIRI, M. D., ... & BLONDIA, C. (2019). 
+          <em>IoT and Big Data technologies for monitoring and processing real-time healthcare data.</em> 
+          <strong>International Journal of Distributed Systems and Technologies (IJDST)</strong>, 10(4), 17–30.
+        </li>
+        <li>KHARBOUCH, A., BEROUINE, A., ELKHOUKHI, H., BERRABAH, S., BAKHOUYA, M., EL OUADGHIRI, D., & GABER, J. (2022). 
+          <em>Internet-of-Things based hardware-in-the-loop framework for model-predictive-control of smart building ventilation.</em> 
+          <strong>Sensors</strong>, 22(20), 7978.
+        </li>
+        <li>ELKHOUKHI, H., BAKHOUYA, M., ELMOUATAMID, A., EL OUADGHIRI, D., & GABER, J. (2024). 
+          <em>A review of occupancy sensing technologies and approaches in smart buildings.</em> 
+          <strong>International Journal of RF Technologies: Research and Applications</strong>.
+        </li>
+        <li>ELKHOUKHI, H., CHAPELLE, F., MEZOUAR, Y., & LAPUSTA, Y. 
+          <em>The use of reinforcement learning for controlling the behavior of the antagonistic shape memory alloy actuator in soft robotic systems.</em> 
+          <strong>Under review in Sensors and Actuators A: Physical</strong>.
+        </li>
+      </ul>
+
+      <!-- Conférences -->
+      <h3>2. Conférences</h3>
+      <ul class="bracketed">
+        <li>ELKHOUKHI, H., BAKHOUYA, M., HANIFI, M., & EL OUADGHIRI, D. (2019, November). 
+          <em>On the use of deep learning approaches for occupancy prediction in energy efficient buildings.</em> 
+          <strong>2019 7th International Renewable and Sustainable Energy Conference (IRSEC)</strong>. IEEE.
+        </li>
+        <li>KHARBOUCH, A., EL KHOUKHI, H., NAIT MALEK, Y., BAKHOUYA, M., DE FLORIO, V., EL OUADGHIRI, D., ... & BLONDIA, C. (2018). 
+          <em>Towards an IoT and Big Data analytics platform for the definition of diabetes telecare services.</em> 
+          <strong>Smart Application and Data Analysis for Smart Cities (SADASC’18)</strong>.
+        </li>
+        <li>ELKHOUKHI, H., NAITMALEK, Y., BEROUINE, A., BAKHOUYA, M., ELOUADGHIRI, D., & ESSAAIDI, M. (2018). 
+          <em>Towards a real-time occupancy detection approach for smart buildings.</em> 
+          <strong>Procedia Computer Science</strong>, 134, 114–120.
+        </li>
+        <li>MALEK, Y. N., KHARBOUCH, A., EL KHOUKHI, H., BAKHOUYA, M., DE FLORIO, V., EL OUADGHIRI, D., ... & BLONDIA, C. (2017). 
+          <em>On the use of IoT and Big Data technologies for real-time monitoring and data processing.</em> 
+          <strong>Procedia Computer Science</strong>, 113, 429–434.
+        </li>
+        <li>KABIR, RAAID, ET AL. (2024). 
+          <em>Photovoltaic power forecasting using neural networks for short and medium-term dependencies.</em> 
+          <strong>IEEE Texas Power and Energy Conference (TPEC)</strong>.
+        </li>
+      </ul>
+
+      <!-- Brevet -->
+      <h3>3. Brevet d’invention</h3>
+      <ul class="bracketed">
+        <li>ELKHOUKHI, H., BAKHOUYA, M., KHARBOUCH, A., <em>et al.</em> (2020). 
+          <strong>Procédé de détection préventive de l’hypoglycémie en temps réel.</strong> 
+          Brevet : MA43608A1 — A61B5/00; A61B5/02.
+        </li>
+      </ul>
     </section>
+
 
 
     <section id="talks" class="content-section hidden">

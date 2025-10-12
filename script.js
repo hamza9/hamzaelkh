@@ -10,3 +10,19 @@ function showSection(id) {
 
 // Affiche "À propos" par défaut au chargement
 window.onload = () => showSection('about');
+
+
+function toggleProject(id) {
+  const imageDiv = document.getElementById(id);
+  const icon = document.getElementById(`icon-${id}`);
+
+  if (imageDiv.classList.contains("hidden")) {
+    imageDiv.classList.remove("hidden");
+    icon.textContent = "–";
+  } else {
+    imageDiv.classList.add("hidden");
+    icon.textContent = "+";
+  }
+}
+
+

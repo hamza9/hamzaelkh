@@ -97,3 +97,4 @@ main {
   content: "[" counter(ref) "] ";
   font-weight: bold;
 }
+

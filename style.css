@@ -292,6 +292,18 @@ ul.bracketed strong {
   transition: transform 0.2s ease;
 }
 
+.project-link {
+  color: #1e3a8a;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.project-link:hover {
+  color: #374bbf;
+  text-decoration: underline;
+}
+
+
 .project-image {
   margin-top: 15px;
   text-align: center;

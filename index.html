@@ -19,8 +19,8 @@
       <a href="#" onclick="showSection('about')">Biographie</a>
       <a href="#" onclick="showSection('projects')">Projets de recherche</a>
       <a href="#" onclick="showSection('publications')">Publications</a>
-      <a href="#" onclick="showSection('talks')">Talks</a>
-      <a href="#" onclick="showSection('cv')">CV</a>
+      <!--<a href="#" onclick="showSection('talks')">Talks</a>-->
+      <a href="#" onclick="showSection('download-cv')">CV</a>
       <a href="#" onclick="showSection('teaching')">Enseignement</a>
       <a href="#" onclick="showSection('contact')">Contact</a>
     </nav>
@@ -29,16 +29,40 @@
   <main>
       
     <section id="about" class="content-section">
-      <h2>Biographie</h2>
-      <p>Actuellement, ATER à l’université Toulouse 2 Jean Jaurès. Il était chercheur postdoctorat en IA et
-        robotique à l'Institut Pascal et à l'INP, Clermont Ferrand, France. Il a travaillé en tant que doctorant
-        en collaboration entre l'Université Moulay Ismail de Meknès et l'Université Internationale de Rabat au
-        Maroc sur différents projets de recherche, à savoir SELFSERV financé par VLIRUOS, MIGRID financé
-        par USAID et HOLSYS financé par IRESEN. Ses principaux intérêts comprennent le domaine de
-        l'intelligence artificielle et ses applications ainsi que les approches d'apprentissage automatique en
-        temps réel et les techniques de traitement de données en flux.</p>
-      <img src="parcours.gif" alt="Résumé architecture" class="resume-photo" />
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px;">
+        Biographie
+      </h2>
+
+      <div class="bio-container">
+
+        <!-- Timeline / Text -->
+        <div class="bio-text">
+          <p>
+            Actuellement, <strong>ATER à l’Université Toulouse 2 Jean Jaurès</strong>. 
+            Précédemment, chercheur postdoctorant en <strong>IA et robotique</strong> à l'Institut Pascal et à l'INP, Clermont-Ferrand, France.
+          </p>
+
+          <p>
+            Doctorant en collaboration entre l'Université Moulay Ismail de Meknès et l'Université Internationale de Rabat, Maroc, 
+            sur différents projets de recherche :
+            <strong>SELFSERV</strong> (VLIR-UOS), <strong>MIGRID</strong> (USAID-PEER), et <strong>HOLSYS</strong> (IRESEN).
+          </p>
+
+          <p>
+            Ses principaux intérêts comprennent l'<strong>intelligence artificielle</strong> et ses applications, 
+            les approches d'<strong>apprentissage automatique en temps réel</strong>, 
+            ainsi que les techniques de <strong>traitement de données en flux</strong>.
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div class="bio-image">
+          <img src="parcours.gif" alt="Résumé architecture" class="resume-photo" />
+        </div>
+
+      </div>
     </section>
+
 
     <!--
     <section id="projects" class="content-section hidden">
@@ -111,7 +135,7 @@
 
 
     <section id="publications" class="content-section">
-      <h2>📚 Publications</h2>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px;">📚 Publications</h2>
 
       <!-- Journaux -->
       <h3>1. Journaux</h3>
@@ -178,6 +202,8 @@
     </section>
 
 
+<!--
+    
 
     <section id="talks" class="content-section hidden">
       <h2>Talks</h2>
@@ -186,17 +212,25 @@
         <li>IoT & Energy Efficiency – ENSA Marrakech, 2019</li>
         <li>UNESCO Hackathon – Inde, 2022</li>
       </ul>
-    </section>
+    </section>-->
 
 
-    <section id="cv" class="content-section hidden">
-      <h2>CV</h2>
-      <p>Téléchargez mon <a href="CV_VF_F.pdf" target="_blank">CV en PDF</a>.</p>
+
+    <section id="download-cv" class="content-section">
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px;">
+        Télécharger mon CV
+      </h2>
+
+      <p>Vous pouvez télécharger mon CV en cliquant sur le bouton ci-dessous :</p>
+
+      <a href="docs/hamza_elkhoukhi_cv.pdf" download class="cv-button">
+        Télécharger le CV
+      </a>
     </section>
 
 
     <section id="teaching" class="content-section hidden">
-      <h2>Activités d’enseignement </h2>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px;"> Activités Enseignement </h2>
       <table border="4" cellspacing="0" cellpadding="8" style="width:100%; border-collapse: collapse; text-align: left;">
         <thead style="background-color: #1e3a8a; color: white;">
           <tr>
@@ -272,11 +306,28 @@
 
 
     
-    <section id="contact" class="content-section hidden">
-      <h2>Contact</h2>
-      <p>Email : <a href="mailto:hamza.el-khoukhi@irit.fr">hamza.el-khoukhi@irit.fr</a></p>
-      <p>Google scholar : <a href="https://scholar.google.com/citations?user=lqxNoQsAAAAJ&hl=fr" target="_blank">hamzaelkhoukhi</a></p>
-    </section>
+<section id="contact" class="content-section hidden">
+  <h2 style="color: #1e3a8a; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px;">
+    Contact
+  </h2>
+
+  <div class="contact-container">
+    <div class="contact-card">
+      <span class="contact-icon">📧</span>
+      <p>Email : 
+        <a href="mailto:hamza.el-khoukhi@irit.fr">hamza.el-khoukhi@irit.fr</a>
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <span class="contact-icon">🎓</span>
+      <p>Google Scholar : 
+        <a href="https://scholar.google.com/citations?user=lqxNoQsAAAAJ&hl=fr" target="_blank">hamzaelkhoukhi</a>
+      </p>
+    </div>
+  </div>
+</section>
+
 
 
 
